@@ -1,0 +1,6 @@
+c:\users\chue_\documents\visual studio 2015\Projects\CBankAccountProj\CBankAccountProj\bin\Debug\CBankAccountProj.exe.config
+c:\users\chue_\documents\visual studio 2015\Projects\CBankAccountProj\CBankAccountProj\obj\Debug\CBankAccountProj.csprojResolveAssemblyReference.cache
+c:\users\chue_\documents\visual studio 2015\Projects\CBankAccountProj\CBankAccountProj\bin\Debug\CBankAccountProj.exe
+c:\users\chue_\documents\visual studio 2015\Projects\CBankAccountProj\CBankAccountProj\bin\Debug\CBankAccountProj.pdb
+c:\users\chue_\documents\visual studio 2015\Projects\CBankAccountProj\CBankAccountProj\obj\Debug\CBankAccountProj.exe
+c:\users\chue_\documents\visual studio 2015\Projects\CBankAccountProj\CBankAccountProj\obj\Debug\CBankAccountProj.pdb
