@@ -60,7 +60,7 @@ namespace CBankAccountProj
         {
 
             Console.WriteLine("____________________________________________\n");
-            Console.WriteLine("Savings account Number: " + SavingsNumber + "\nYour checking account balance: $" + SBalance);
+            Console.WriteLine("Savings account Number: " + SavingsNumber + "\nYour savings account balance: $" + SBalance);
             Console.WriteLine("Enter A to deposit money or B to withdraw");
             string savingsmoney = Console.ReadLine();
             if (savingsmoney.ToLower() == "a")
@@ -69,6 +69,7 @@ namespace CBankAccountProj
                 double depositAmount = int.Parse(Console.ReadLine());
                 Console.WriteLine("Your savings account balance: $" + (SBalance += depositAmount));
                 Console.WriteLine(DateTime.Now);
+                Console.WriteLine("______________________________________________");
                 DisplaySavings();
             }
             else if (savingsmoney.ToLower() == "b")
@@ -78,10 +79,13 @@ namespace CBankAccountProj
                 double WithdrawAmount = int.Parse(Console.ReadLine());
                 Console.WriteLine("Your savings account balance: $" + (SBalance -= WithdrawAmount));
                 Console.WriteLine(DateTime.Now);
+                Console.WriteLine("______________________________________________");
+
+
             }
             else
             {
-                Console.WriteLine("______________________________________________");
+                Console.WriteLine("That is an invalid Key");
                 return;
             }
         }

@@ -60,21 +60,27 @@ namespace CBankAccountProj
                 double damount = int.Parse(Console.ReadLine());
                 Console.WriteLine("Your checking account balance: $" + (CBalance += damount));
                 Console.WriteLine(DateTime.Now);
+                Console.WriteLine("______________________________________________");
                 DisplayChecking();
             }
-            else
-            //if (checkmoney.ToLower() == "b")
+            else if (checkmoney.ToLower() == "b")
 
             {
                 Console.WriteLine("Enter an amount");
                 double wamount = int.Parse(Console.ReadLine());
                 Console.WriteLine("Your checking account balance: $" + (CBalance -= wamount));
                 Console.WriteLine(DateTime.Now);
+
+                Console.WriteLine("______________________________________________");
             }
-            Console.WriteLine("______________________________________________");
-            return;
+            else
+            {
+                Console.WriteLine("That is an invalid Key");
+                return;
+            }
+
+            }
         }
     }
-}
 
 
