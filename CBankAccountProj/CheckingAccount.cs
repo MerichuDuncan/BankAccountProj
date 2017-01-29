@@ -60,8 +60,9 @@ namespace CBankAccountProj
                 double damount = int.Parse(Console.ReadLine());
                 Console.WriteLine("Your checking account balance: $" + (CBalance += damount));
                 Console.WriteLine(DateTime.Now);
+                DisplayChecking();
             }
-            else 
+            else
             //if (checkmoney.ToLower() == "b")
 
             {
@@ -69,22 +70,11 @@ namespace CBankAccountProj
                 double wamount = int.Parse(Console.ReadLine());
                 Console.WriteLine("Your checking account balance: $" + (CBalance -= wamount));
                 Console.WriteLine(DateTime.Now);
-
             }
-            //else 
-            //{
-            //    Console.WriteLine("Enter A if you like to continue another transactions or C to exit");
-            //    string answer2 = Console.ReadLine();
-            //    if (answer2.ToLower() == "a")
-            //    {
-            //        DisplayChecking();
-            //    }
-            //    else
-            //    {
-                  
-            //    }
-            }
+            Console.WriteLine("______________________________________________");
+            return;
         }
     }
+}
 
 

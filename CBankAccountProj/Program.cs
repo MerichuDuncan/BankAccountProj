@@ -16,6 +16,7 @@ namespace CBankAccountProj
 
             Account client1 = new Account("Gregory Duncan ", 4444000000001234, 1 / 2 / 2010);
             client1.ClientsInfo();
+
             {
                 while (true)
                 {
@@ -24,12 +25,15 @@ namespace CBankAccountProj
                     if (answer1.ToLower() == "a")
                     {
                         CheckingAccount checkingA = new CheckingAccount(1000, 1 / 2 / 2020, 4400000000002345);
+
                         checkingA.DisplayChecking();
 
                     }
+
                     else if (answer1.ToLower() == "b")
                     {
                         SavingsAccount savingsA = new SavingsAccount(6500, 4400000012343210, 1 / 1 / 2000);
+
                         savingsA.DisplaySavings();
                     }
 
@@ -37,19 +41,25 @@ namespace CBankAccountProj
                     {
 
                         ReserveAccount reserveA = new ReserveAccount(4300000012249876, 1310, 1 / 1 / 2009);
+
                         reserveA.DisplayReserve();
+
+
 
                     }
                     else
-                    { 
-                            Console.WriteLine("Thank you for your business");
-                            {
-                                break;
-                            }
+                    {
+                        client1.ClientsInfo();
+
+                        Console.WriteLine("Thank you for your business");
+
+                        {
+                            break;
                         }
                     }
                 }
             }
         }
     }
+}
 

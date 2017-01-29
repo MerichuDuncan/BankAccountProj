@@ -34,6 +34,7 @@ namespace CBankAccountProj
         {
             get { return this.accountBalance; }
             set { this.accountBalance = value; }
+            
         }
 
         public int Date
@@ -44,12 +45,11 @@ namespace CBankAccountProj
 
 
 
-        //constructor(2 arguments)
+        //constructor
         public Account()
         {
 
         }
-
         public Account(string clientName, decimal accountNumber, int dateTime)
         {
             this.clientName = clientName;
@@ -57,20 +57,19 @@ namespace CBankAccountProj
             this.dateTime = dateTime;
             
         }
-        public Account( double accountBalance)
-        {
-            this.accountBalance = accountBalance;
-        }
-     
-        public virtual void ClientsInfo()
-        {
+      
+        public void ClientsInfo()
+         
+         {
+            
+            
             Console.WriteLine("Account Name: " + clientName);
             Console.WriteLine("Account number: " + AccountNumber);
-            Console.WriteLine("Your account balance is: " + accountBalance);
             Console.WriteLine(DateTime.Now);
-            
+            return;
            
         }
+     
 
     }
 }

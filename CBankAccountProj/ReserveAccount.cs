@@ -63,6 +63,7 @@ namespace CBankAccountProj
                 double resDepamount = int.Parse(Console.ReadLine());
                 Console.WriteLine("Your reserve account balance: $" + (ReserveBalance += resDepamount));
                 Console.WriteLine(DateTime.Now);
+                DisplayReserve();
             }
             else if (reservemoney.ToLower() == "b")
 
@@ -71,12 +72,13 @@ namespace CBankAccountProj
                 double resWidamount = int.Parse(Console.ReadLine());
                 Console.WriteLine("Your reserve account balance: $" + (ReserveBalance -= resWidamount));
                 Console.WriteLine(DateTime.Now);
-
             }
             else
             {
-                DisplayReserve();
+                Console.WriteLine("______________________________________________");
+                return;
             }
+
         }
     }
-    }
+}

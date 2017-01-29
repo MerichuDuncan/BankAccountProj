@@ -69,6 +69,7 @@ namespace CBankAccountProj
                 double depositAmount = int.Parse(Console.ReadLine());
                 Console.WriteLine("Your savings account balance: $" + (SBalance += depositAmount));
                 Console.WriteLine(DateTime.Now);
+                DisplaySavings();
             }
             else if (savingsmoney.ToLower() == "b")
 
@@ -78,7 +79,12 @@ namespace CBankAccountProj
                 Console.WriteLine("Your savings account balance: $" + (SBalance -= WithdrawAmount));
                 Console.WriteLine(DateTime.Now);
             }
-        }
+            else
+            {
+                Console.WriteLine("______________________________________________");
+                return;
+            }
         }
     }
-   
+}
+
