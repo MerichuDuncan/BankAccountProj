@@ -16,10 +16,7 @@ namespace CBankAccountProj
 
         private double accountBalance;
 
-      //  private float withdraw;
-   
-
-        private string exit;
+        private int dateTime;
 
 
         //properties
@@ -39,10 +36,10 @@ namespace CBankAccountProj
             set { this.accountBalance = value; }
         }
 
-        public string Exit
+        public int Date
         {
-            get { return this.exit; }
-            set { this.exit = value; }
+            get { return this.dateTime; }
+            set { this.dateTime = value; }
         }
 
 
@@ -53,10 +50,11 @@ namespace CBankAccountProj
 
         }
 
-        public Account(string clientName, decimal accountNumber)
+        public Account(string clientName, decimal accountNumber, int dateTime)
         {
             this.clientName = clientName;
             this.accountNumber = accountNumber;
+            this.dateTime = dateTime;
             
         }
         public Account( double accountBalance)
@@ -66,8 +64,10 @@ namespace CBankAccountProj
      
         public virtual void ClientsInfo()
         {
-            Console.WriteLine("Account number: " + accountNumber);
+            Console.WriteLine("Account Name: " + clientName);
+            Console.WriteLine("Account number: " + AccountNumber);
             Console.WriteLine("Your account balance is: " + accountBalance);
+            Console.WriteLine(DateTime.Now);
             
            
         }

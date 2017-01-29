@@ -31,7 +31,7 @@ namespace CBankAccountProj
             get { return this.checkingNumber; }
             set { this.checkingNumber = value; }
         }
-        public double Balance
+        public double CBalance
         {
             get { return this.accountBalance; }
             set { this.accountBalance = value; }
@@ -41,35 +41,50 @@ namespace CBankAccountProj
         {
             this.accountBalance = accountBalance;
             this.dateTime = dateTime;
-            this.checkingNumber = 4400000000002345;
+            this.checkingNumber = checkingNumber;
         }
-        
-       
-       
-      
-        
+
+
+
+
+
         public void DisplayChecking()
         {
-            Console.WriteLine("Your account balance is: " + Balance);
-            Console.WriteLine();
-            Console.WriteLine("Please add money to your Checking Account: ");
-            double deposit = int.Parse(Console.ReadLine());
-            Console.WriteLine("_______________________________________");
-            double results = deposit + Balance;
-            Console.WriteLine("Total Balance is : $" + results + " " + DateTime.Now + "\nType A to Withdraw or B to Exit");
-            string result1 = Console.ReadLine();
-            if (result1.ToLower() == "a")
+            Console.WriteLine("____________________________________________\n");
+            Console.WriteLine("Checking account Number: " + checkingNumber + "\nYour checking account balance: $" + CBalance);
+            Console.WriteLine("Enter A to deposit money or B to withdraw");
+            string checkmoney = Console.ReadLine();
+            if (checkmoney.ToLower() == "a")
             {
                 Console.WriteLine("Enter an amount");
-                double withdraw = int.Parse(Console.ReadLine());
-                Console.WriteLine("Your account balance: $" + (results - withdraw) + " " + DateTime.Now);
+                double damount = int.Parse(Console.ReadLine());
+                Console.WriteLine("Your checking account balance: $" + (CBalance += damount));
+                Console.WriteLine(DateTime.Now);
             }
-            
-        }
-        public override void ClientsInfo()
-        {
-            base.ClientsInfo();
+            else 
+            //if (checkmoney.ToLower() == "b")
+
+            {
+                Console.WriteLine("Enter an amount");
+                double wamount = int.Parse(Console.ReadLine());
+                Console.WriteLine("Your checking account balance: $" + (CBalance -= wamount));
+                Console.WriteLine(DateTime.Now);
+
+            }
+            //else 
+            //{
+            //    Console.WriteLine("Enter A if you like to continue another transactions or C to exit");
+            //    string answer2 = Console.ReadLine();
+            //    if (answer2.ToLower() == "a")
+            //    {
+            //        DisplayChecking();
+            //    }
+            //    else
+            //    {
+                  
+            //    }
+            }
         }
     }
-}
+
 

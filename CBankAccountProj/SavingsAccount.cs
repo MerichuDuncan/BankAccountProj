@@ -11,10 +11,9 @@ namespace CBankAccountProj
         //fields
         private double deposit;
         private double withdraw;
-        private string statement;
-
-
-
+        private decimal SavingsNumber;
+        private double SBalance;
+        private int dateTime2;
 
         //properties
         public double Deposit
@@ -22,19 +21,64 @@ namespace CBankAccountProj
             get { return this.deposit; }
             set { this.deposit = value; }
         }
-        private string Statement
+        public decimal Savings
         {
-            get { return this.statement; }
-            set { this.statement = value; }
+            get { return this.SavingsNumber; }
+            set { this.SavingsNumber = value; }
         }
-        private double Withdraw
+        public double Withdraw
         {
             get { return this.withdraw; }
             set { this.withdraw = value; }
         }
-        public override void ClientsInfo()
+        public double SaveBalance
         {
-            base.ClientsInfo();
+            get { return this.SBalance; }
+            set { this.SBalance = value; }
+        }
+        public int Date2
+        {
+            get { return this.dateTime2; }
+            set { this.dateTime2 = value; }
+        }
+        //constructor
+        public SavingsAccount(double deposit, decimal SavingsNumber, double withdraw, double SBalance)
+        {
+            this.deposit = deposit;
+            this.SavingsNumber = SavingsNumber;
+            this.withdraw = withdraw;
+            this.SBalance = SBalance;
+
+        }
+        public SavingsAccount(double SBalance, decimal SavingsNumber, int dateTime2)
+        {
+            this.SBalance = SBalance;
+            this.SavingsNumber = SavingsNumber;
+            this.dateTime2 = dateTime2;
+        }
+        public void DisplaySavings()
+        {
+
+            Console.WriteLine("____________________________________________\n");
+            Console.WriteLine("Savings account Number: " + SavingsNumber + "\nYour checking account balance: $" + SBalance);
+            Console.WriteLine("Enter A to deposit money or B to withdraw");
+            string savingsmoney = Console.ReadLine();
+            if (savingsmoney.ToLower() == "a")
+            {
+                Console.WriteLine("Enter an amount");
+                double depositAmount = int.Parse(Console.ReadLine());
+                Console.WriteLine("Your savings account balance: $" + (SBalance += depositAmount));
+                Console.WriteLine(DateTime.Now);
+            }
+            else if (savingsmoney.ToLower() == "b")
+
+            {
+                Console.WriteLine("Enter an amount");
+                double WithdrawAmount = int.Parse(Console.ReadLine());
+                Console.WriteLine("Your savings account balance: $" + (SBalance -= WithdrawAmount));
+                Console.WriteLine(DateTime.Now);
+            }
+        }
         }
     }
-}
+   
