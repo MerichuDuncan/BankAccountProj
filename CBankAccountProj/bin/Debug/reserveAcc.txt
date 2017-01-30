@@ -1,0 +1,7 @@
+Client name: 
+Reserve account number: 4300000012249876
+Reserve starting balance: 6500
+MoneyIn: 7785
+Reserve starting balance: 6500
+MoneyOut: 1285
+1/29/2017 8:21:43 PM

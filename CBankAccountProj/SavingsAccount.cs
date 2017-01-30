@@ -90,9 +90,24 @@ namespace CBankAccountProj
                 return;
             }
         }
-          
+        public void SavingsWriter()
+        {
+            StreamWriter saveup = new StreamWriter("savings.txt");
+            double currBalance = 6500;
+            saveup.WriteLine("Client name: " + clientName);
+            saveup.WriteLine("Savings account number: " + SavingsNumber);
+            saveup.WriteLine("Savings starting balance: " + currBalance);
+            saveup.WriteLine("MOneyIn: " + (currBalance - SBalance));
+            saveup.WriteLine("Savings current Balance: " + SBalance);
+            saveup.WriteLine(DateTime.Now);
+            saveup.Close();
+        }
+      
+    }
+        
+        
         }
        
-    }
+    
 
 

@@ -82,14 +82,18 @@ namespace CBankAccountProj
                 Console.WriteLine("That is an invalid Key");
                 return;
             }
-            StreamWriter Reserve = new StreamWriter("reserve.txt");
-            double currBalance = 6500;
+        }
+        public void ReserveWriter()
+        { 
+            StreamWriter Reserve = new StreamWriter("reserveAcc.txt");
+            double currBalance = 1310;
             Reserve.WriteLine("Client name: " + clientName);
             Reserve.WriteLine("Reserve account number: " + ReserveNumber);
             Reserve.WriteLine("Reserve starting balance: " + currBalance);
             Reserve.WriteLine("MoneyIn: " + (ReserveBalance += currBalance));
             Reserve.WriteLine("Reserve starting balance: " + currBalance);
             Reserve.WriteLine("MoneyOut: " + (ReserveBalance -= currBalance));
+            Reserve.WriteLine(DateTime.Now);
             Reserve.Close();
         }
         

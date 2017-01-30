@@ -83,7 +83,13 @@ namespace CBankAccountProj
                 Console.WriteLine("That is an invalid Key");
                 return;
             }
+            
 
+           
+        }
+
+        public void CheckWriter()
+        {
             StreamWriter check = new StreamWriter("Checking.txt");
             double currentBal = 1000;
             check.WriteLine("Client Name: " + clientName);
@@ -94,8 +100,6 @@ namespace CBankAccountProj
             check.WriteLine(DateTime.Now);
             check.Close();
         }
-
-
     }
 
 }

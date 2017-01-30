@@ -1,6 +1,6 @@
 Client Name: 
 Account number: 4400000000002345
 Your checking account balance: 1000
-Account new balance: 877
-Moneyout: 123
-1/29/2017 8:01:23 PM
+Account new balance: 1002
+Moneyout: -2
+1/29/2017 8:21:24 PM

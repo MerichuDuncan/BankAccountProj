@@ -1,0 +1,6 @@
+Client name: 
+Savings account number: 4400000012343210
+Savings starting balance: 6500
+MOneyIn: 2500
+Savings current Balance: 4000
+1/29/2017 8:21:34 PM
