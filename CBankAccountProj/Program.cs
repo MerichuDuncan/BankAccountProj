@@ -6,60 +6,76 @@ using System.Threading.Tasks;
 
 namespace CBankAccountProj
 {
+
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Duncan's National Bank \nPlease your 4 number PIN");
-            int pin = int.Parse(Console.ReadLine());
-            Console.WriteLine("_____________________________________________________");
 
-            Account client1 = new Account("Gregory Duncan ", 4444000000001234, 1 / 2 / 2010);
-            client1.ClientsInfo();
+                Console.WriteLine("Welcome to Duncan's National Bank \nPlease your 4 number PIN");
+                int pin = int.Parse(Console.ReadLine());
+                Console.WriteLine("_____________________________________________________");
 
-            {
-                while (true)
+                Account client1 = new Account("Gregory Duncan ", 4444000000001234, 1 / 2 / 2010);
+                client1.ClientsInfo();
+
+
+
                 {
-                    Console.WriteLine("\nEnter A to check your Checking Account \nEnter B to check your Savings Account \nEnter C to check your Reserve Account  \nE to Exit");
-                    string answer1 = Console.ReadLine();
-                    if (answer1.ToLower() == "a")
+                    while (true)
                     {
-                        CheckingAccount checkingA = new CheckingAccount(1000, 1 / 2 / 2020, 4400000000002345);
-
-                        checkingA.DisplayChecking();
-
-                    }
-
-                    else if (answer1.ToLower() == "b")
-                    {
-                        SavingsAccount savingsA = new SavingsAccount(6500, 4400000012343210, 1 / 1 / 2000);
-
-                        savingsA.DisplaySavings();
-                    }
-
-                    else if (answer1.ToLower() == "c")
-                    {
-
-                        ReserveAccount reserveA = new ReserveAccount(4300000012249876, 1310, 1 / 1 / 2009);
-
-                        reserveA.DisplayReserve();
-
-
-
-                    }
-                    else
-                    {
-                        client1.ClientsInfo();
-
-                        Console.WriteLine("Thank you for your business");
-
+                        Console.WriteLine("\nEnter A to check your Checking Account \nEnter B to check your Savings Account \nEnter C to check your Reserve Account  \nE to Exit");
+                        string answer1 = Console.ReadLine();
+                        if (answer1.ToLower() == "a")
                         {
-                            break;
+
+
+                            CheckingAccount checkingA = new CheckingAccount(1000, 1 / 2 / 2020, 4400000000002345);
+
+
+                            checkingA.DisplayChecking();
+                           
+
+
                         }
+
+                        else if (answer1.ToLower() == "b")
+                        {
+                            SavingsAccount savingsA = new SavingsAccount(6500, 4400000012343210, 1 / 1 / 2000);
+
+                            savingsA.DisplaySavings();
+                        }
+
+                        else if (answer1.ToLower() == "c")
+                        {
+
+                            ReserveAccount reserveA = new ReserveAccount(4300000012249876, 1310, 1 / 1 / 2009);
+
+                            reserveA.DisplayReserve();
+
+
+
+
+
+                        }
+                        else
+                        {
+                            client1.ClientsInfo();
+
+                            Console.WriteLine("Thank you for your business");
+
+                            {
+                                break;
+                            }
+
+                        }
+                       
                     }
+
                 }
             }
         }
     }
-}
+
+
 

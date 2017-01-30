@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -54,11 +55,14 @@ namespace CBankAccountProj
             Console.WriteLine("Checking account Number: " + checkingNumber + "\nYour checking account balance: $" + CBalance);
             Console.WriteLine("Enter A to deposit money or B to withdraw");
             string checkmoney = Console.ReadLine();
+
             if (checkmoney.ToLower() == "a")
             {
                 Console.WriteLine("Enter an amount");
                 double damount = int.Parse(Console.ReadLine());
                 Console.WriteLine("Your checking account balance: $" + (CBalance += damount));
+
+
                 Console.WriteLine(DateTime.Now);
                 Console.WriteLine("______________________________________________");
                 DisplayChecking();
@@ -67,11 +71,12 @@ namespace CBankAccountProj
 
             {
                 Console.WriteLine("Enter an amount");
-                double wamount = int.Parse(Console.ReadLine());
-                Console.WriteLine("Your checking account balance: $" + (CBalance -= wamount));
+                double withdraw = int.Parse(Console.ReadLine());
+                Console.WriteLine("Your checking account balance: $" + (CBalance -= withdraw));
                 Console.WriteLine(DateTime.Now);
-
                 Console.WriteLine("______________________________________________");
+
+
             }
             else
             {
@@ -79,8 +84,22 @@ namespace CBankAccountProj
                 return;
             }
 
-            }
+            StreamWriter check = new StreamWriter("Checking.txt");
+            double currentBal = 1000;
+            check.WriteLine("Client Name: " + clientName);
+            check.WriteLine("Account number: " + checkingNumber);
+            check.WriteLine("Your checking account balance: " + currentBal);
+            check.WriteLine("Account new balance: " + CBalance);
+            check.WriteLine("Moneyout: " + (currentBal -= CBalance));
+            check.WriteLine(DateTime.Now);
+            check.Close();
         }
+
+
     }
+
+}
+
+
 
 

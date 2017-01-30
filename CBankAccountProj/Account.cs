@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -34,7 +35,7 @@ namespace CBankAccountProj
         {
             get { return this.accountBalance; }
             set { this.accountBalance = value; }
-            
+
         }
 
         public int Date
@@ -55,21 +56,22 @@ namespace CBankAccountProj
             this.clientName = clientName;
             this.accountNumber = accountNumber;
             this.dateTime = dateTime;
-            
+
         }
-      
+
         public void ClientsInfo()
-         
-         {
-            
-            
+
+        {
+
+
             Console.WriteLine("Account Name: " + clientName);
             Console.WriteLine("Account number: " + AccountNumber);
             Console.WriteLine(DateTime.Now);
             return;
-           
-        }
-     
 
+        }
+        
     }
-}
+    }
+
+

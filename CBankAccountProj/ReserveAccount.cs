@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -81,7 +82,17 @@ namespace CBankAccountProj
                 Console.WriteLine("That is an invalid Key");
                 return;
             }
+            StreamWriter Reserve = new StreamWriter("reserve.txt");
+            double currBalance = 6500;
+            Reserve.WriteLine("Client name: " + clientName);
+            Reserve.WriteLine("Reserve account number: " + ReserveNumber);
+            Reserve.WriteLine("Reserve starting balance: " + currBalance);
+            Reserve.WriteLine("MoneyIn: " + (ReserveBalance += currBalance));
+            Reserve.WriteLine("Reserve starting balance: " + currBalance);
+            Reserve.WriteLine("MoneyOut: " + (ReserveBalance -= currBalance));
+            Reserve.Close();
         }
+        
         }
     }
 
