@@ -94,7 +94,7 @@ namespace CBankAccountProj
         {
             StreamWriter saveup = new StreamWriter("savings.txt");
             double currBalance = 6500;
-            saveup.WriteLine("Client name: " + clientName);
+            saveup.WriteLine("Account full name: Samson Duncan");
             saveup.WriteLine("Savings account number: " + SavingsNumber);
             saveup.WriteLine("Savings starting balance: " + currBalance);
             saveup.WriteLine("MOneyIn: " + (currBalance - SBalance));

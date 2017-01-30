@@ -87,7 +87,7 @@ namespace CBankAccountProj
         { 
             StreamWriter Reserve = new StreamWriter("reserveAcc.txt");
             double currBalance = 1310;
-            Reserve.WriteLine("Client name: " + clientName);
+            Reserve.WriteLine("Account full name: Samson Duncan ");
             Reserve.WriteLine("Reserve account number: " + ReserveNumber);
             Reserve.WriteLine("Reserve starting balance: " + currBalance);
             Reserve.WriteLine("MoneyIn: " + (ReserveBalance += currBalance));

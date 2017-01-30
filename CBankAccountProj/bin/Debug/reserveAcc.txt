@@ -1,7 +1,8 @@
-Client name: 
+Account full name: Samson Duncan 
+Summary of you transcations: 
 Reserve account number: 4300000012249876
-Reserve starting balance: 6500
-MoneyIn: 7785
-Reserve starting balance: 6500
-MoneyOut: 1285
-1/29/2017 8:21:43 PM
+Reserve starting balance: 1310
+MoneyIn: 486
+Reserve starting balance: 1310
+MoneyOut: -824
+1/30/2017 8:49:04 AM

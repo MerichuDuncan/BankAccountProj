@@ -1,6 +1,6 @@
-Client Name: 
+Account full name: Samson Duncan 
 Account number: 4400000000002345
 Your checking account balance: 1000
-Account new balance: 1002
-Moneyout: -2
-1/29/2017 8:21:24 PM
+Account new balance: 979
+Moneyout: 21
+1/30/2017 9:00:24 AM

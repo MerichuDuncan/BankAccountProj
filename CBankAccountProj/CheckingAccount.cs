@@ -15,6 +15,7 @@ namespace CBankAccountProj
         private double withdraw;
         private int dateTime;
         private double accountBalance;
+        
 
         //properties
         public double Withdraw
@@ -46,9 +47,6 @@ namespace CBankAccountProj
         }
 
 
-
-
-
         public void DisplayChecking()
         {
             Console.WriteLine("____________________________________________\n");
@@ -76,23 +74,23 @@ namespace CBankAccountProj
                 Console.WriteLine(DateTime.Now);
                 Console.WriteLine("______________________________________________");
 
-
+               
             }
             else
             {
                 Console.WriteLine("That is an invalid Key");
                 return;
             }
-            
 
-           
+
+
         }
 
         public void CheckWriter()
         {
             StreamWriter check = new StreamWriter("Checking.txt");
             double currentBal = 1000;
-            check.WriteLine("Client Name: " + clientName);
+            check.WriteLine("Account full name: Samson Duncan");
             check.WriteLine("Account number: " + checkingNumber);
             check.WriteLine("Your checking account balance: " + currentBal);
             check.WriteLine("Account new balance: " + CBalance);
